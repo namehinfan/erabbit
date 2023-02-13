@@ -1,13 +1,15 @@
 <template>
-  <div>
-    {{ $store.state.user.profile.account }}
-    <button @click="$store.commit('user/setUser',{account:'zy'})">设置用户信息</button>
-  </div>
+  <RouterView />
 </template>
 
 <script>
+import request from '@/utils/request'
 export default {
   setup () {
+    const fn = () => {
+      request('/member/profile', 'get', { a: 10 })
+    }
+    return { fn }
   }
 }
 </script>

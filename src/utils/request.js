@@ -19,7 +19,7 @@ instance.interceptors.request.use((config) => {
   return Promise.reject(err)
 })
 
-instance.interceptors.response.use(() => { }, err => {
+instance.interceptors.response.use(res => res.data, err => {
   if (err.response && err.response.status === 401) {
     store.commit('user/setUser', {})
     const fullPath = encodeURIComponent(router.currentRoute.value.fullPath)
@@ -29,7 +29,7 @@ instance.interceptors.response.use(() => { }, err => {
 })
 
 // 请求工具函数
-export default (url, method, submitData) => { 
+export default (url, method, submitData) => {
   return instance({
     url,
     method,
