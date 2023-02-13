@@ -1,17 +1,13 @@
 <template>
-  <div class="container">
-    HomePage
-  </div>
+  <div class="top-category">TopCategory</div>
 </template>
 
 <script>
 export default {
-  name: 'HomePage'
+  name: 'TopCategory'
 }
 </script>
 
 <style scoped lang="less">
-.container {
-  .hoverShadow();
-}
+
 </style>
