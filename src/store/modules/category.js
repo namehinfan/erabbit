@@ -19,7 +19,7 @@ export default {
     },
     hide (state, id) {
       const currentCategory = state.list.find(item => item.id === id)
-      currentCategory.open = true
+      currentCategory.open = false
     }
   },
   actions: {

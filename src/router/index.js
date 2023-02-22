@@ -9,7 +9,7 @@ const routes = [
   {
     path: '/',
     component: Layout,
-    childern: [
+    children: [
       { path: '/', component: Home },
       { path: '/category/:id', component: TopCategory },
       { path: '/category/sub/:id', component: SubCategory }
